@@ -14,14 +14,21 @@ function computerPlay () {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        
-    }
     console.log('Computer picks: ' + computerSelection );
     console.log('Player picks: ' + playerSelection );
+    
+    if (playerSelection == 'rock' && computerSelection == 'scissors') {
+        console.log('You win!');
+    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+        console.log('You lose!');
+    } else if (playerSelection == 'rock' && computerSelection == 'rock') {
+        console.log("It's a tie!");
+    } else if (' ') {
+
+    }
 }
 
 console.log('Rock..\nPaper..\nScissors..\nSHOOT!');
-const playerSelection = 'rock';
 const computerSelection = computerPlay();
+const playerSelection = prompt('Type one: rock, paper, scissors');
 console.log(playRound(playerSelection, computerSelection));
