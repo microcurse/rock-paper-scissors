@@ -14,21 +14,32 @@ function computerPlay () {
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log('Computer picks: ' + computerSelection );
-    console.log('Player picks: ' + playerSelection );
-    
-    if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        console.log('You win!');
-    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        console.log('You lose!');
-    } else if (playerSelection == 'rock' && computerSelection == 'rock') {
-        console.log("It's a tie!");
-    } else if (' ') {
 
-    }
+    if (playerSelection == 'rock' && computerSelection == 'scissors' ||
+        playerSelection == 'paper' && computerSelection == 'rock' ||
+        playerSelection == 'scissors' && computerSelection == 'paper') {
+            return 'You win!';
+            //return winMessage;
+        } else if (playerSelection == 'paper' && computerSelection == 'scissors' ||
+        playerSelection == 'scissors' && computerSelection == 'rock' ||
+        playerSelection == 'rock' && computerSelection == 'paper') {
+            return 'You lose!';
+            //return loseMessage;
+        } else {
+            return "It's a tie..";
+        }
+}
+
+function game() {
+    /** This is where we keep score of the game. First to 5 wins */
 }
 
 console.log('Rock..\nPaper..\nScissors..\nSHOOT!');
+
 const computerSelection = computerPlay();
-const playerSelection = prompt('Type one: rock, paper, scissors');
+const playerSelection = prompt('Type one: rock, paper, scissors').toLowerCase();
+
+console.log('Player picks: ' + playerSelection );
+console.log('Computer picks: ' + computerSelection );
+
 console.log(playRound(playerSelection, computerSelection));
