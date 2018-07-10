@@ -30,10 +30,10 @@ function game() {
     let rounds = 0;
     while (rounds <= 5) {
         playRound();
-        if (victory = true) {
+        if (victory) {
             playerWins++
             console.log("You win!");
-        } else if (defeat = true){
+        } else if (defeat){
             computerWins++
             console.log("Computer wins!");
         } else {
