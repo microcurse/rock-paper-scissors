@@ -12,29 +12,16 @@ function computerPlay () {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == 'rock' && computerSelection == 'scissors' ||
-        playerSelection == 'paper' && computerSelection == 'rock' ||
-        playerSelection == 'scissors' && computerSelection == 'paper') {
-            victory = true;
-            console.log( "Win" );
-        } else if (playerSelection == 'paper' && computerSelection == 'scissors' ||
-        playerSelection == 'scissors' && computerSelection == 'rock' ||
-        playerSelection == 'rock' && computerSelection == 'paper') {
-            defeat = true;
-            console.log( "Lose" );
-        } else {
-            tie = true;
-            console.log("tie");
-        }
+
 }
 
 function game() {
     /** This is where we keep score of the game. First to 5 wins */
     let rounds = 0;
     while (rounds < 5) {
-        playRound();
+        var winner = playRound();
         rounds++;
-        console.log('Test ' + rounds);
+        console.log('Test ' + rounds + " " + winner);
     }
 }
 console.log('Rock..\nPaper..\nScissors..\nSHOOT!');
