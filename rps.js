@@ -16,30 +16,25 @@ function playRound(playerSelection, computerSelection) {
         playerSelection == 'paper' && computerSelection == 'rock' ||
         playerSelection == 'scissors' && computerSelection == 'paper') {
             victory = true;
+            console.log( "Win" );
         } else if (playerSelection == 'paper' && computerSelection == 'scissors' ||
         playerSelection == 'scissors' && computerSelection == 'rock' ||
         playerSelection == 'rock' && computerSelection == 'paper') {
             defeat = true;
+            console.log( "Lose" );
         } else {
             tie = true;
+            console.log("tie");
         }
 }
 
 function game() {
     /** This is where we keep score of the game. First to 5 wins */
     let rounds = 0;
-    while (rounds <= 5) {
+    while (rounds < 5) {
         playRound();
-        if (victory) {
-            playerWins++
-            console.log("You win!");
-        } else if (defeat){
-            computerWins++
-            console.log("Computer wins!");
-        } else {
-            console.log("It's a tie!");
-        }
         rounds++;
+        console.log('Test ' + rounds);
     }
 }
 console.log('Rock..\nPaper..\nScissors..\nSHOOT!');
