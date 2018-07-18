@@ -1,5 +1,5 @@
 function computerPlay(){
-    console.log(Math.floor((Math.random() * 3 ) + 1));
+    return (Math.floor((Math.random() * 3 ) + 1));
 }
 computerPlay();
 // rock = 1, scissors = 2, paper = 3
