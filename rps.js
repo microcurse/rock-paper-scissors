@@ -1,4 +1,4 @@
-// This randomly chooses rock paper or scissors for the computer
+// Randomly choose rock paper or scissors for the computer
 function computerPlay(){
     computer = (Math.floor((Math.random() * 3 ) + 1));
     if (computer == 1) {
@@ -11,13 +11,13 @@ function computerPlay(){
     return computer;
 }
 
-// This asks the player what they want to play
+// Ask the player what they want to play
 function playerPlay(){
     player = prompt("To play, type: 'rock', 'paper', or 'scissors'");
     return player.toLowerCase();
 }
 
-// This checks to see who won the round
+// Check to see who won the round
 function playRound(player, computer) {
     switch (player) {
         case 'rock':
@@ -53,7 +53,7 @@ function playRound(player, computer) {
     }
 }
 
-// This plays 5 rounds and returns the scores for the game
+// Plays 5 rounds and returns the scores for the game
 function game() {
     var rounds = 0;
     while (rounds < 5) {
