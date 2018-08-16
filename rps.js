@@ -76,7 +76,7 @@ function game() {
     }
 }
 
-const html = '';
+
 var computer = '';
 var player = '';
 let wins = 0;
