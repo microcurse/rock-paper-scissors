@@ -54,29 +54,29 @@ function playRound(player, computer) {
 }
 
 // Plays 5 rounds and returns the scores for the game
-function game() {
-    var rounds = 0;
-    while (rounds < 5) {
-        computer = computerPlay();
-        player = playerPlay();
+// function game() {
+//     var rounds = 0;
+//     while (rounds < 5) {
+//         computer = computerPlay();
+//         player = playerPlay();
 
-        console.log("You picked: " + player);
-        console.log("The computer picks: " + computer );
-        console.log(playRound(player, computer));
-        rounds += 1;
-    }
+//         console.log("You picked: " + player);
+//         console.log("The computer picks: " + computer );
+//         console.log(playRound(player, computer));
+//         rounds += 1;
+//     }
 
-    console.log("Your score is: " + wins);
-    console.log("The computer's score is: " + losses);
+//     console.log("Your score is: " + wins);
+//     console.log("The computer's score is: " + losses);
 
-    if (wins < losses) {
-        console.log("The computer wins the game!");
-    } else {
-        console.log("You win the game!");
-    }
-}
+//     if (wins < losses) {
+//         console.log("The computer wins the game!");
+//     } else {
+//         console.log("You win the game!");
+//     }
+// }
 
-
+const buttons = document.querySelectorAll('btn');
 var computer = '';
 var player = '';
 let wins = 0;
