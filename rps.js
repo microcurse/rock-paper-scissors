@@ -76,10 +76,20 @@ function playRound(player, computer) {
 //     }
 // }
 
-const buttons = document.querySelectorAll('btn');
-var computer = '';
-var player = '';
+const results = document.querySelector('.results');
+const game = document.createElement('div');
+game.classList.add('game');
+results.appendChild(game);
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        var computer = computerPlay();
+        game.textContent = (playRound(button.id, computer));
+    });
+});
+
 let wins = 0;
 let losses = 0;
 
-game();
+// game();
