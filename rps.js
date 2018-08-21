@@ -81,22 +81,25 @@ const game = document.createElement('div');
 game.classList.add('game');
 results.appendChild(game);
 
-const scores = document.querySelector('.scores');
-const human_s = document.createElement('div');
+const human_cont = document.querySelector('.human');
+const human_s = document.createElement('span');
 human_s.classList.add('human-score');
-scores.appendChild(human_s);
+human_cont.appendChild(human_s);
 
-const computer_s = document.createElement('div');
+const computer_cont = document.querySelector('.computer');
+const computer_s = document.createElement('span');
 computer_s.classList.add('computer-score');
-scores.appendChild(computer_s);
+computer_cont.appendChild(computer_s);
 
 const buttons = document.querySelectorAll('button');
+
+
 buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        var computer = computerPlay();
-        game.textContent = (playRound(button.id, computer));
+    button.addEventListener('click', () => {
+        game.textContent = (playRound(button.id, computerPlay()));
+
         human_s.textContent = wins;
-        computer_s.textcontent = losses;
+        computer_s.textContent = losses;
     });
 });
 
