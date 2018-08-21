@@ -93,14 +93,24 @@ computer_cont.appendChild(computer_s);
 
 const buttons = document.querySelectorAll('button');
 
-
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         game.textContent = (playRound(button.id, computerPlay()));
-
-        human_s.textContent = wins;
-        computer_s.textContent = losses;
+        
+        if (wins < 5 && losses < 5) {
+            human_s.textContent = wins;
+            computer_s.textContent = losses;
+        } else if (wins < 5 && losses == 5) {
+            computer_s.textContent = losses;
+            game.textContent = "Computer wins the game!";
+            window.alert("Computer wins the game! \nBetter luck next time!");
+        } else if (wins == 5 && losses < 5) {
+            human_s.textContent = wins;
+            game.textContent = "You won the game!";
+            window.alert("You won the game!");
+        }
     });
+
 });
 
 let wins = 0;
