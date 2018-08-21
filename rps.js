@@ -92,5 +92,3 @@ buttons.forEach((button) => {
 
 let wins = 0;
 let losses = 0;
-
-// game();
