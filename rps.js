@@ -53,28 +53,35 @@ function playRound(player, computer) {
     }
 }
 
+// Update game results
 const results = document.querySelector('.results');
 const game = document.createElement('div');
 game.classList.add('game');
 results.appendChild(game);
 
+// Update human scores
 const human_cont = document.querySelector('.human');
 const human_s = document.createElement('span');
 human_s.classList.add('human-score');
 human_cont.appendChild(human_s);
 
+// Update computer scores
 const computer_cont = document.querySelector('.computer');
 const computer_s = document.createElement('span');
 computer_s.classList.add('computer-score');
 computer_cont.appendChild(computer_s);
 
+// Play the game using buttons in the HTML
 const buttons = document.querySelectorAll('button');
-
 buttons.forEach((button) => {
+    // Check for when a button is clicked
     button.addEventListener('click', () => {
+        // Add results from the round into the div.game
         game.textContent = (playRound(button.id, computerPlay()));
         
+        // First to 5 wins the game
         if (wins < 5 && losses < 5) {
+            // Score from human
             human_s.textContent = wins;
             computer_s.textContent = losses;
         } else if (wins < 5 && losses == 5) {
