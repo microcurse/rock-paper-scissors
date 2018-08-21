@@ -56,7 +56,7 @@ function playRound(player, computer) {
 // Update game results
 const results = document.querySelector('.results');
 const game = document.createElement('div');
-game.classList.add('game');
+game.classList.add('game-text');
 results.appendChild(game);
 
 // Update human scores
@@ -71,7 +71,7 @@ const computer_s = document.createElement('span');
 computer_s.classList.add('computer-score');
 computer_cont.appendChild(computer_s);
 
-// Play the game using buttons in the HTML
+// Play the game using buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     // Check for when a button is clicked
